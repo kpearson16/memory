@@ -1,7 +1,31 @@
-.board{
+.cards{
  display: flex;   
  flex-wrap: wrap;
+ justify-content: center;
+ align-items: center;
  height: 900px;
  width: 900px;
  border: solid black;
+}
+h1{
+    text-align: center;
+}
+.card{
+    height: 200px;
+    width: 200px;
+    margin-left: 10px;
+    margin-top: 10px;
+    border: solid teal;
+    border-width: 5px;
+    transition: 0.5s ease;
+    background-color: white;
+   cursor: pointer;
+   border-radius: 10px;
+}
+
+img{
+    height: 190px;
+    width: 190px;
+    align-self: center;
+    opacity: 0;
 }

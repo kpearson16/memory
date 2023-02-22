@@ -1,4 +1,5 @@
-const allCards = [
+document.addEventListener('cards', () => {
+    const allCards = [
     {
     name: 'amused',
     URL: 'images/amused.jpeg'
@@ -57,6 +58,7 @@ const allCards = [
     },
   
 ]
+
 // gameboard
 const board = document.querySelector('board')
 
@@ -70,3 +72,4 @@ const board = document.querySelector('board')
 //mismatch
 
 //win 
+})
