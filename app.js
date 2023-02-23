@@ -1,75 +1,32 @@
-document.addEventListener('cards', () => {
-    const allCards = [
-    {
-    name: 'amused',
-    URL: 'images/amused.jpeg'
-    },
-    {
-    name: 'baby',
-    URL: 'images/baby.jpeg'
-    },
-    {
-    name: 'beanie',
-    URL: 'images/beaniebaby.jpeg'
-    },
-    {
-    name: 'frog',
-    URL: 'images/Frog-Meme-PNG-Transparent.png'
-    },
-    {
-    name: 'girl',
-    URL: 'images/girl.jpeg'
-   },
-   {
-    name: 'infamous',
-    URL: 'images/infamous.jpeg'
-    },
-    {
-    name: 'jordan',
-    URL: 'images/jordan.jpeg'
-    },
-    {
-    name: 'frog',
-    URL: 'images/Frog-Meme-PNG-Transparent.png'
-    },
-    {
-    name: 'kermit',
-    URL: 'images/kermittea.jpeg'
-    },
-    {
-    name: 'kid2',
-    URL: 'images/kid2.jpeg'
-    },
-    {
-    name: 'laugh',
-    URL: 'images/laugh.png'
-    },
-    {
-    name: 'think',
-    URL: 'images/think.jpeg'
-    },
-    {
-    name: 'what',
-    URL: 'images/whattt.jpeg'
-    },
-    {
-    name: 'worried',
-    URL: 'images/worriedkermit.jpeg'
-    },
-  
-]
 
 // gameboard
-const board = document.querySelector('board')
+let counter = 0;[]
+let firstFlip= '';
+let secondFlip= '';
 
+const cards = document.querySelectorAll('.cards, .card');
+cards.forEach((card) => {
+    card.addEventListener('click', () => {
+      card.classList.add('selected'); 
+      if (counter === 0){
+        firstFlip = card.getAttribute('meme');
+        counter++;
+      } else {
+        secondFlip= card.getAttribute('meme');
+        counter = 0;
 
-
-
-
-// flip
-//match
-
-//mismatch
-
-//win 
-})
+        if (firstFlip === secondFlip){
+            const match = document.querySelectorAll(
+                ".card[meme='" + firstFlip + "']"
+            );
+            match[0].classList.add('flipped');
+            match[0].classList.remove('clicked');
+            match[1].classList.add('flipped');
+            match[1].classList.remove('selected');
+        } else {
+            const nonMatch = 
+            document.querySelectorAll('.card.selected');
+            nonMatch[0].classList.remove('selected');
+            nonMatch[1].classList.remove('selected');
+        }
+    }
