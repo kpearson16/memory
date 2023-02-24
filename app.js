@@ -1,9 +1,9 @@
 
 // gameboard
-let counter = 0;[]
+let counter = 0;
 let firstFlip= '';
 let secondFlip= '';
-
+// check for match
 const cards = document.querySelectorAll('.cards, .card');
 cards.forEach((card) => {
     card.addEventListener('click', () => {
@@ -26,7 +26,16 @@ cards.forEach((card) => {
         } else {
             const nonMatch = 
             document.querySelectorAll('.card.selected');
+            setTimeout(() => {
             nonMatch[0].classList.remove('selected');
             nonMatch[1].classList.remove('selected');
-        }
-    }
+        }, 800);
+      }
+}
+let game = document.querySelectorAll('.cards');
+game.forEach(function(card){
+  let randomNum = math.floor(math.random() * 24);
+  card.style.order = randomNum;
+})
+    })
+}); 
