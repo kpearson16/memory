@@ -20,7 +20,7 @@ cards.forEach((card) => {
                 ".card[meme='" + firstFlip + "']"
             );
             match[0].classList.add('flipped');
-            match[0].classList.remove('clicked');
+            match[0].classList.remove('selected');
             match[1].classList.add('flipped');
             match[1].classList.remove('selected');
         } else {
