@@ -32,7 +32,7 @@ cards.forEach((card) => {
         }, 800);
       }
 }
-let game = document.querySelectorAll('.cards');
+let game = document.querySelectorAll('.card');
 game.forEach(function(card){
   let randomNum = math.floor(math.random() * 24);
   card.style.order = randomNum;

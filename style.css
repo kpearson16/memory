@@ -15,8 +15,8 @@ h1{
     width: 130px;
     margin-left: 10px;
     margin-top: 10px;
-    background-color:  solid teal;
     border: solid teal;
+    background-color: teal;
     border-width: 5px;
    border-radius: 10px;
 }
@@ -24,9 +24,22 @@ h1{
 img{
     height: 150px;
     width: 130px;
-    align-content: center;
+    display: flex;
+    justify-content: center;
     /*opacity: 0;*/
 }
+.card img{
+    opacity: 0;
+}
 .card.selected {
-    background-color: greenyellow;
+    background-color: rgb(109, 136, 68);
+    border: solid rgb(109, 136, 68);
+    border-width: 10px;
+}
+.card.flipped{
+    background-color: orange;
+    border: solid orange;
+}
+.card.flipped img, .card.selected img{
+    opacity: 1;
 }
