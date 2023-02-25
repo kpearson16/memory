@@ -1,8 +1,8 @@
 
 // gameboard
 let counter = 0;
-let firstFlip= '';
-let secondFlip= '';
+let firstFlip = '';
+let secondFlip = '';
 // check for match
 const cards = document.querySelectorAll('.cards, .card');
 cards.forEach((card) => {
@@ -12,10 +12,16 @@ cards.forEach((card) => {
         firstFlip = card.getAttribute('meme');
         counter++;
       } else {
-        secondFlip= card.getAttribute('meme');
+        secondFlip = card.getAttribute('meme');
         counter = 0;
 
         if (firstFlip === secondFlip){
+          firstFlip.style.display='fixed';
+          secondFlip.style.display='fixed';
+          firstFlip = null;
+          secondFlip = null;
+          counter++;
+          if (counter >= 12) setTimeout(() => alert('Level Complete'), 2000);
             const match = document.querySelectorAll(
                 ".card[meme='" + firstFlip + "']"
             );
@@ -29,7 +35,7 @@ cards.forEach((card) => {
             setTimeout(() => {
             nonMatch[0].classList.remove('selected');
             nonMatch[1].classList.remove('selected');
-        }, 800);
+        }, 1000);
       }
 }
 let game = document.querySelectorAll('.card');

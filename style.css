@@ -5,7 +5,6 @@
  align-items: center;
  height: 100vh;
  width: 100vw;
- border: solid black;
 }
 h1{
     text-align: center;
@@ -18,13 +17,14 @@ h1{
     border: solid teal;
     background-color: teal;
     border-width: 5px;
-   border-radius: 10px;
+    border-radius: 10px;
 }
 
 img{
     height: 150px;
     width: 130px;
     display: flex;
+    border-radius: 30px;
     justify-content: center;
     /*opacity: 0;*/
 }
@@ -34,7 +34,7 @@ img{
 .card.selected {
     background-color: rgb(109, 136, 68);
     border: solid rgb(109, 136, 68);
-    border-width: 10px;
+    border-width: 5px;
 }
 .card.flipped{
     background-color: orange;
