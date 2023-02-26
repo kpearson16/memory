@@ -1,8 +1,8 @@
 
 // gameboard
 let counter = 0;
-let firstFlip = '';
-let secondFlip = '';
+let firstFlip = "";
+let secondFlip = "";
 // check for match
 const cards = document.querySelectorAll('.cards, .card');
 cards.forEach((card) => {
@@ -16,7 +16,7 @@ cards.forEach((card) => {
         counter = 0;
 
         if (firstFlip === secondFlip){
-          if (counter >= 12) setTimeout(() => alert('Level Complete'), 2000);
+          //if (counter >= 12) setTimeout(() => alert('Level Complete'), 2000);
             const match = document.querySelectorAll(
                 ".card[meme='" + firstFlip + "']"
             );
