@@ -16,11 +16,6 @@ cards.forEach((card) => {
         counter = 0;
 
         if (firstFlip === secondFlip){
-          firstFlip.style.display='fixed';
-          secondFlip.style.display='fixed';
-          firstFlip = null;
-          secondFlip = null;
-          counter++;
           if (counter >= 12) setTimeout(() => alert('Level Complete'), 2000);
             const match = document.querySelectorAll(
                 ".card[meme='" + firstFlip + "']"
