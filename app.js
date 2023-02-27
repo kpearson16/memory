@@ -33,20 +33,32 @@ cards.forEach((card) => {
           incorrectCards[1].classList.remove("selected");
         }, 600);
       }
-      /*function shuffle (){
-        let shuffle = math.random();
-      document.querySelectorAll('.cards')=shuffle}
-    }*/
-    function shuffle(){
-    firstSelection = secondSelection = 12;
-    let array = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24];
-    array.sort(() => math.random() > 0.5 ? 1 : -1);
-    cards.forEach((card, i) => {
-      card.classList.remove("selected");
-    });
-  }
-shuffle();
-cards.forEach(card => {
-  card.addEventListener("click", selected)
+      function shuffle() {
+        let cards = document.querySelector(".cards");
+        const btn=document.querySelector('btn');
+        btn.addEventListener("click", function shuffle(){
+          alert("shuffled!");
+        })
 
+        let elementsArray = Array.prototype.slice.call(cards.getElementsByClassName('cards'));
+          elementsArray.forEach(function(element){
+          cards.removeChild(element);
+        })
+        shuffleArray(elementsArray);
+        elementsArray.forEach(function(element){
+        cards.appendChild(element);
+      })
+      }
+      
+      function shuffleArray(array) {
+          for (var i = array.length - 1; i > 0; i--) {
+              var j = Math.floor(Math.random() * (i + 1));
+              var temp = array[i];
+              array[i] = array[j];
+              array[j] = temp;
+          }
+          return array;
+      }
+    }
+  })
 });
