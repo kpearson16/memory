@@ -19,12 +19,15 @@ h1{
     border: solid black;
     background-color: rgba(40, 160, 136, 0.801);
 }
+.card.selected img, .card.flipped img{
+    opacity: 1;
+}
 
 img{
     height: 150px;
     width: 130px;
     display: flex;
-    border-radius: 30px;
+    border-radius: 80px;
     justify-content: center;
     /*opacity: 0;*/
 }
@@ -35,9 +38,4 @@ img{
     background-color: rgb(109, 17, 149);
     
 }
-.card.flipped{
-    background-color: orange;
-}
-.card.selected img{
-    opacity: 1;
-}
+
