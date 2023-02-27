@@ -19,7 +19,6 @@ setInterval(() => {
           p2=true;
           timer=61;
           p1.style.color=""
-
       }
      let time=document.querySelector('.time')
      time.innerHTML=`Time: ${timer}`
@@ -36,7 +35,7 @@ setInterval(() => {
           p1=true;
           p2=false;
           timer=61;
-          p1.style.color="red"
+          
 
       }
      let time=document.querySelector('.time')
