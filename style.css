@@ -5,7 +5,6 @@
  align-items: center;
  height: 100vh;
  width: 100vw;
- border: solid black;
 }
 h1{
     text-align: center;
@@ -15,16 +14,20 @@ h1{
     width: 130px;
     margin-left: 10px;
     margin-top: 10px;
-    border: solid teal;
-    background-color: teal;
     border-width: 5px;
-   border-radius: 10px;
+    border-radius: 10px;
+    border: solid black;
+    background-color: rgba(40, 160, 136, 0.801);
+}
+.card.selected img, .card.flipped img{
+    opacity: 1;
 }
 
 img{
     height: 150px;
     width: 130px;
     display: flex;
+    border-radius: 30px;
     justify-content: center;
     /*opacity: 0;*/
 }
@@ -32,14 +35,9 @@ img{
     opacity: 0;
 }
 .card.selected {
-    background-color: rgb(109, 136, 68);
-    border: solid rgb(109, 136, 68);
-    border-width: 10px;
+    background-color: rgb(109, 17, 149);
+    
 }
 .card.flipped{
     background-color: orange;
-    border: solid orange;
-}
-.card.flipped img, .card.selected img{
-    opacity: 1;
 }
