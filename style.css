@@ -41,3 +41,6 @@ img{
 .p1, .p2{
     font-weight: 600;
 }
+.card.flipped{
+    background-color: white;
+}
