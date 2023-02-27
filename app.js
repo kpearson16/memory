@@ -33,10 +33,20 @@ cards.forEach((card) => {
           incorrectCards[1].classList.remove("selected");
         }, 600);
       }
-      function shuffle (){
+      /*function shuffle (){
         let shuffle = math.random();
       document.querySelectorAll('.cards')=shuffle}
-    }
-  });
-});
+    }*/
+    function shuffle(){
+    firstSelection = secondSelection = 12;
+    let array = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24];
+    array.sort(() => math.random() > 0.5 ? 1 : -1);
+    cards.forEach((card, i) => {
+      card.classList.remove("selected");
+    });
+  }
+shuffle();
+cards.forEach(card => {
+  card.addEventListener("click", selected)
 
+});
