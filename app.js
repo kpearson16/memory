@@ -39,4 +39,5 @@ game.forEach(function(card){
   card.style.order = randomNum;
 })
     })
+
 }); 
