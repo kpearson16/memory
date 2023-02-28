@@ -4,24 +4,24 @@ let secondFlip = "";
 let p1 = true;
 let p2 = false;
 let counter =0;
-let lose = [];
-let timeOut = [];
+let match= [];
 //make timer to implement a win/lose state with two players
 setInterval(() => {
   if(p1){
-    //let p1= document.querySelector('.p1')
+    //p1 goes
     p1= document.querySelector('.p1')
     p1.style.color="teal"
     if(timer!== 0){
       for (let i = 0; i < 1; i++) {
         timer--
       } 
+      //if not completed in time 
       } else {
         alert("You Lose. Next Player!")
         cards.forEach((card)=>{
           card.classList.remove("flipped")
         })
-        //let p1= document.querySelector('.p1')
+        
          p1= document.querySelector('.p1')
           timer=61;
           p1.style.color="red"
@@ -31,6 +31,7 @@ setInterval(() => {
      let time=document.querySelector('.time')
      time.innerHTML=`Time: ${timer}`
     }
+    //switch to p2
   if(p2){
     //let p2= document.querySelector('.p2')
      p2= document.querySelector('.p2')
@@ -80,6 +81,9 @@ cards.forEach((card) => {
         matches[1].classList.add("flipped");
        matches[1].classList.remove("selected");
       } else {
+        //if( === 0){
+         // alert("You've Won")
+        //}
         const nonmatches = document.querySelectorAll(".card.selected");
       
        //flip over cards that werent matches
