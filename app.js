@@ -33,7 +33,6 @@ setInterval(() => {
     }
     //switch to p2
   if(p2){
-    //let p2= document.querySelector('.p2')
      p2= document.querySelector('.p2')
     p2.style.color="teal"
     if(timer !== 0){
