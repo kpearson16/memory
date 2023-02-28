@@ -17,7 +17,7 @@ setInterval(() => {
         timer--
       } 
       } else {
-        alert("You Lose. Next Player")
+        alert("You Lose. Next Player!")
         //let p1= document.querySelector('.p1')
          p1= document.querySelector('.p1')
           timer=61;
@@ -45,7 +45,7 @@ setInterval(() => {
           p2.style.color="red"
           p1=true;
           p2=false;
-      }
+        }
      let time=document.querySelector('.time')
      time.innerHTML=`Time: ${timer}`
   }
