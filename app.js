@@ -18,6 +18,9 @@ setInterval(() => {
       } 
       } else {
         alert("You Lose. Next Player!")
+        cards.forEach((card)=>{
+          card.classList.remove("flipped")
+        })
         //let p1= document.querySelector('.p1')
          p1= document.querySelector('.p1')
           timer=61;
@@ -38,6 +41,8 @@ setInterval(() => {
       } 
       } else {
         alert("You Lose. Player 1, GO!")
+        cards.forEach((card)=>{
+          card.classList.remove("flipped")})
         //let p2= document.querySelector('.p2')
         p2= document.querySelector('.p2')
         
@@ -83,11 +88,6 @@ cards.forEach((card) => {
           nonmatches[0].classList.remove("selected");
           nonmatches[1].classList.remove("selected");
         }, 700);
-        /*lose = []
-        lost.textContent = timeOut
-        if (nonmatches > 1 && counter === 0){
-          alert ('You lose!')
-        }*/
         }
       }
     })
