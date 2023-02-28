@@ -4,39 +4,47 @@ let secondFlip = "";
 let p1 = true;
 let p2 = false;
 let counter =0;
+let lose = [];
+let timeOut = [];
 //make timer to implement a win/lose state with two players
 setInterval(() => {
   if(p1){
-    let p1= document.querySelector('.p1')
+    //let p1= document.querySelector('.p1')
+    p1= document.querySelector('.p1')
     p1.style.color="teal"
     if(timer!== 0){
-      for (i = 0; i < 1; i++) {
+      for (let i = 0; i < 1; i++) {
         timer--
       } 
       } else {
-        let p1= document.querySelector('.p1')
+        alert("You Lose. Next Player")
+        //let p1= document.querySelector('.p1')
+         p1= document.querySelector('.p1')
+          timer=61;
+          p1.style.color="red"
           p1=false;
           p2=true;
-          timer=61;
-          p1.style.color=""
       }
      let time=document.querySelector('.time')
      time.innerHTML=`Time: ${timer}`
     }
   if(p2){
-    let p2= document.querySelector('.p2')
+    //let p2= document.querySelector('.p2')
+     p2= document.querySelector('.p2')
     p2.style.color="teal"
     if(timer !== 0){
-      for (i = 0; i < 1; i++) {
+      for (let i = 0; i < 1; i++) {
         timer--
       } 
       } else {
-        let p1= document.querySelector('.p1')
+        alert("You Lose. Player 1, GO!")
+        //let p2= document.querySelector('.p2')
+        p2= document.querySelector('.p2')
+        
+          timer=61;
+          p2.style.color="red"
           p1=true;
           p2=false;
-          timer=61;
-          
-
       }
      let time=document.querySelector('.time')
      time.innerHTML=`Time: ${timer}`
@@ -75,7 +83,11 @@ cards.forEach((card) => {
           nonmatches[0].classList.remove("selected");
           nonmatches[1].classList.remove("selected");
         }, 700);
-
+        /*lose = []
+        lost.textContent = timeOut
+        if (nonmatches > 1 && counter === 0){
+          alert ('You lose!')
+        }*/
         }
       }
     })
