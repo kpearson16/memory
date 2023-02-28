@@ -1,1 +1,1 @@
-# memory
+Memory/match is a popular game that requires focus. I played it alot in childhood. I used html to create the cards, css to style them and simple vanilla javascript to make the game interactive. I implemented a timer to make it have a lose state. The text color of the player changes to indicate which player is currently on deck. Changes I will need to iterate: a win state, a match state, and a way to randomize the cards. I realized I should've made the cards in JavaScript after I was about 75% completed. 
